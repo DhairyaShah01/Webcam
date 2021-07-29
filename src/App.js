@@ -1,10 +1,10 @@
 import logo from './logo.svg';
-import './App.css';
 import { WebcamCapture } from './components/Webcam'
+import {theme2} from './components/theme'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={theme2}>
       <WebcamCapture />
     </div>
   );
