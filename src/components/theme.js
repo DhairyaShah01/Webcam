@@ -10,7 +10,7 @@ export const theme2 = {
 }
 
 export const buttonTheme = {
-    margin: '5px'
+    margin: '7px'
 }
 
 export default theme;
