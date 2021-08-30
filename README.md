@@ -1,3 +1,5 @@
+<h1>Webcam</h1>
+
 - This project is aimed at creating a webpage that will capture an image from the user's camera.
 - The user can crop the image properly before submitting this image.
 - This project can be used in multiple bigger applications like submitting a cheque in a bank application, submitting proper size photographs for a job application, etc.
