@@ -4,6 +4,7 @@ import { useScreenshot, createFileName } from 'use-react-screenshot';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import html2canvas from 'html2canvas';
 import theme from './theme';
+import { buttonTheme } from './theme';
 
 const WebcamComponent = () => <Webcam />;
 
@@ -65,14 +66,16 @@ export const WebcamCapture = () => {
             <div className="webcam-img" style={{alignSelf:'center'}}>
 
                 {image == '' ?
+                <div style={theme}>
                 <Webcam
                     audio={false}
-                    height={200}
+                    height={500}
                     ref={webcamRef}
                     screenshotFormat="image/jpeg"
-                    width={220}
+                    width={300}
                     videoConstraints={videoConstraints}
-                /> :
+                />
+                </div> :
                 <div id="capture" style={theme}>
                     <TransformWrapper>
                     <TransformComponent>
@@ -84,7 +87,7 @@ export const WebcamCapture = () => {
             <div>
                 {image != '' ?
                     <div>
-                    <button onClick={(e) => {
+                    <button style={buttonTheme} onClick={(e) => {
                         e.preventDefault();
                         setImage('')
                     }}
@@ -92,7 +95,7 @@ export const WebcamCapture = () => {
                         Retake Image</button>
                         <button onClick={downloadScreenshot}>Submit</button>
                         </div> :
-                    <button onClick={(e) => {
+                    <button style={buttonTheme} onClick={(e) => {
                         e.preventDefault();
                         capture();
                     }}
